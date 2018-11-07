@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CityActivity">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff0033"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/base_action_bar_back_normal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="当前城市:南京"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:paddingRight="50dp"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:id="@+id/search"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/contact_search_box_edittext_keyword_background">
+
+            <TextView
+                android:id="@+id/pic_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/magnifying_glass" />
+
+            <EditText
+                android:id="@+id/searching"
+                android:layout_toRightOf="@+id/pic_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="10dp"
+               android:paddingTop="7dp"
+                android:background="@null"
+                android:hint="seacrhing" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_toRightOf="@+id/search"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="search"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/mListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -3,4 +3,5 @@
     <string name="place">南京</string>
     <string name="releasetime">20:21发布</string>
     <string name="humidity">湿度：68%</string>
+    <string name="title_activity_city">CityActivity</string>
 </resources>

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/all">
 
     <LinearLayout
         android:id="@+id/topPanel"
@@ -19,6 +20,7 @@
             android:layout_weight="1">
 
             <ImageView
+                android:id="@+id/city"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
@@ -67,7 +69,7 @@
 
     <LinearLayout
         android:id="@+id/bg"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@mipmap/biz_plugin_weather_shenzhen_bg"
         android:orientation="vertical">
@@ -101,8 +103,8 @@
                         android:id="@+id/releasetime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/place"
                         android:layout_below="@id/place"
+                        android:layout_alignLeft="@+id/place"
                         android:text="@string/releasetime"
                         android:textColor="#ffffff"
                         android:textSize="20sp" />
@@ -111,14 +113,14 @@
                         android:id="@+id/humidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/place"
                         android:layout_below="@id/releasetime"
+                        android:layout_alignLeft="@+id/place"
                         android:text="@string/humidity"
                         android:textColor="#ffffff"
                         android:textSize="20sp" />
 
                 </RelativeLayout>
-                <!--moudle_1_right-->
+
             </LinearLayout>
 
             <!--moudle_1_right-->
@@ -198,6 +200,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -206,6 +209,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/Temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -214,6 +218,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/weather"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -222,6 +227,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/wind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="风力3级"
@@ -231,129 +237,38 @@
         </LinearLayout>
         <!--moudle_3-->
         <LinearLayout
-            android:id="@+id/moudle_3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-            <!--moudle_3_left-->
-            <LinearLayout
-                android:id="@+id/moudle_3_left"
-                android:layout_width="0dp"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="7日星期五"
-                    android:textColor="#ffffff" />
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/biz_plugin_weather_qing" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="22℃~29℃"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="晴"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3~4级"
-                    android:textColor="#ffffff" />
-            </LinearLayout>
-            <!--moudle_3_center-->
+                android:layout_weight="3"
+                android:layout_gravity="center" />
             <LinearLayout
-                android:id="@+id/moudle_3_center"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:orientation="horizontal"
+                android:layout_gravity="center" >
+                <View
+                    android:id="@+id/dot_1"
+                    android:layout_width="16dip"
+                    android:layout_height="16dip"
+                    android:layout_margin="6dip"
+                    android:background="@drawable/dot_normal" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="8日星期六"
-                    android:textColor="#ffffff" />
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/biz_plugin_weather_qing" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="22℃~29℃"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="晴"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3~4级"
-                    android:textColor="#ffffff" />
+                <View
+                    android:id="@+id/dot_2"
+                    android:layout_width="16dip"
+                    android:layout_height="16dip"
+                    android:layout_margin="6dip"
+                    android:background="@drawable/dot_normal" />
             </LinearLayout>
-            <!--moudle_3_right-->
-            <LinearLayout
-                android:id="@+id/moudle_3_right"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="9日星期日"
-                    android:textColor="#ffffff" />
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/biz_plugin_weather_qing" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="22℃~29℃"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="晴"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3~4级"
-                    android:textColor="#ffffff" />
-            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 
 
